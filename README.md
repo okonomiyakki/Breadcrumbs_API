@@ -40,7 +40,7 @@
 ```sql
   SELECT note_id, title
   FROM note
-  WHERE parent_id = ${ntoe_id}
+  WHERE parent_id = ${note_id}
 ```
 
 3. 요청으로 받은 `note_id` 와 일치하는 행의 `parent_id` 의 값이 `null` 이 되기 전 까지 재귀적으로 pooling 하면서, 해당 행의 `title` 값을 순차적으로 배열에 추가하여 `breadcrumbs` 필드를 만족시킵니다.
@@ -48,7 +48,7 @@
 ```sql
   SELECT note_id, title, content, parent_id
   FROM note
-  WHERE note_id = ${ntoe_id}
+  WHERE note_id = ${note_id}
 ```
 
 ## 6. 결과 정보
