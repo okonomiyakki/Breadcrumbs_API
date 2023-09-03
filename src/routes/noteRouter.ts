@@ -5,6 +5,6 @@ const noteRouter = Router();
 
 noteRouter.post('/', noteServive.addNoteHandler);
 
-noteRouter.get('/:noteId', noteServive.getNoteHandler);
+noteRouter.get('/:pageId', noteServive.getNoteHandler);
 
 export default noteRouter;
